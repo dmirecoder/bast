@@ -16,7 +16,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 ${json.soal}
 
 Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}teli untuk bantuan
+Ketik ${usedPrefix}hlir untuk bantuan
 Bonus: ${poin} XP
     `.trim()
     conn.tebaklirik[id] = [
