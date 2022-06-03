@@ -36,8 +36,8 @@ Publish : *${xp}*
 
 
 }
-handler.help = ['news'].map(v => v + ' <category> <lang>')
+handler.help = ['news2'].map(v => v + ' <category> <lang>')
 handler.tags = ['tools']
-handler.command = /^(news|berita)$/i
+handler.command = /^(news2|berita2)$/i
 
 export default handler

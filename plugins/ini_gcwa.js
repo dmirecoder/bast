@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { text, usedPrefix, command }) => {
   try {
   if (!text) throw `Contoh penggunaan ${usedPrefix}${command} bot`
-  let json = await fetch(`https://api-xcoders.xyz/api/search/groupwa?query=${text}&apikey=xcoders`)
+  let json = await fetch(`https://dhn-api.herokuapp.com/api/search/whatsapp-group?query=${text}&apikey=4ca83deeb14d61d16cf0`)
   
   let jsons = await json.json()
         let x = jsons.result
