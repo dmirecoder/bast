@@ -49,7 +49,7 @@ Hai, *%name!*
 %readmore
 Support me: https://www.saweria.co/sxzy
 `.trimStart(),
-  header: '⎔═━–〈 *%category* 〉–━═⎔
+  header: '⎔═━–〈 *%category* 〉–━═⎔',
   body: '┊々 %cmd %islimit %isPremium',
   footer: '┗–––––––––––––✦\n',
   after: `⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ 
