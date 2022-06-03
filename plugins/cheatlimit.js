@@ -5,7 +5,10 @@ let handler = async (m) => {
     global.db.data.users[who].exp += 100000
     global.db.data.users[who].limit += 100000
     global.db.data.users[who].money += 100000
-    conn.sendButton(m.chat, `*${global.db.data.users[who].limit}* Limit Tersisa`, author, null, [
+    conn.sendButton(m.chat, `*Mainnya Hebat* 
+    *${global.db.data.users[who].exp}* EXP Tersisa
+    *${global.db.data.users[who].limit}* Limit Tersisa
+    *${global.db.data.users[who].money}* Money Tersisa`, author, null, [
         ['Chit', '.ngechit']
     ], m)
 }

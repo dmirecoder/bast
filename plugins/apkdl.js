@@ -3,7 +3,8 @@ let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, 'Masukan Command nya', m)
 
-	await fetch(`https://nzcha-apii.herokuapp.com/apk-search?q=${text}`).then ((res) => {
+let pes = await fetch(`https://nzcha-apii.herokuapp.com/apk-search?q=${text}`)
+let res = await pes.json()
 	 	let hasil = `
 Nama App : ${res.result.name}
 Link : ${res.result.url}
@@ -14,7 +15,7 @@ let image = res.result.thumb
     conn.sendButton(m.chat, image, hasil,wm,'Menu', '.menu', m)
 
     conn.reply(m.chat, hasil, m)
-	})
+	
 }
 handler.help = ['rexdl apk']
 handler.tags = ['tools']
