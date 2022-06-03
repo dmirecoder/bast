@@ -12,7 +12,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let json = await res.json()
     let caption = `
 Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}hint untuk hint
+Ketik ${usedPrefix}hani untuk hani
 Bonus: ${poin} XP
     `.trim()
     conn.tebakanime[id] = [
@@ -33,6 +33,6 @@ handler.command = /^tebakanime/i
 export default handler
 
 const buttons = [
-    ['hint', '/hint'],
-    ['nyerah', 'menyerah']
+    ['Hint', '/hani'],
+    ['Nyerah', 'menyerahani']
 ]

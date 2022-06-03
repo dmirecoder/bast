@@ -35,6 +35,6 @@ handler.command = /^tebaksiapa/i
 export default handler
 
 const buttons = [
-    ['hint', '/hint'],
-    ['nyerah', 'menyerah']
+    ['Hint', '/hsia'],
+    ['Nyerah', 'menyerahsia']
 ]

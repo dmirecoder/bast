@@ -2,13 +2,13 @@ import similarity from 'similarity'
 const threshold = 0.72
 export async function before(m) {
     let id = m.chat
-    if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.text || !/Ketik.*hint/i.test(m.quoted.text) || /.*hint/i.test(m.text))
+    if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.text || !/Ketik.*hben/i.test(m.quoted.text) || /.*hben/i.test(m.text))
         return !0
     this.tebakbendera = this.tebakbendera ? this.tebakbendera : {}
     if (!(id in this.tebakbendera))
         return conn.sendButton(m.chat, 'Soal itu telah berakhir', author, null, buttontebakbendera, m)
     if (m.quoted.id == this.tebakbendera[id][0].id) {
-        let isSurrender = /^((me)?nyerah|surr?ender)$/i.test(m.text)
+        let isSurrender = /^((me)?nyerahben|surr?ender)$/i.test(m.text)
         if (isSurrender) {
             clearTimeout(this.tebakbendera[id][3])
             delete this.tebakbendera[id]
@@ -25,8 +25,8 @@ export async function before(m) {
             m.reply(`*Dikit Lagi!*`)
         else
             conn.sendButton(m.chat, `*Salah!*`, author, null, [
-                ['hint', '/hint'],
-                ['nyerah', 'menyerah']
+                ['Hint', '/hben'],
+                ['Nyerah', 'menyerahben']
             ], m)
     }
     return !0

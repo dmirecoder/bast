@@ -2,37 +2,37 @@ import similarity from 'similarity'
 const threshold = 0.72
 export async function before(m) {
     let id = m.chat
-    if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.text || !/Ketik.*hint/i.test(m.quoted.text) || /.*hint/i.test(m.text))
+    if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !m.text || !/Ketik.*hani/i.test(m.quoted.text) || /.*hani/i.test(m.text))
         return !0
-    this.tebakjenaka = this.tebakjenaka ? this.tebakjenaka : {}
-    if (!(id in this.tebakjenaka))
-        return conn.sendButton(m.chat, 'Soal itu telah berakhir', author, null, buttontebakjenaka, m)
-    if (m.quoted.id == this.tebakjenaka[id][0].id) {
-        let isSurrender = /^((me)?nyerah|surr?ender)$/i.test(m.text)
+    this.tebakanime = this.tebakanime ? this.tebakanime : {}
+    if (!(id in this.tebakanime))
+        return conn.sendButton(m.chat, 'Soal itu telah berakhir', author, null, buttontebakanime, m)
+    if (m.quoted.id == this.tebakanime[id][0].id) {
+        let isSurrender = /^((me)?nyerahani|surr?ender)$/i.test(m.text)
         if (isSurrender) {
-            clearTimeout(this.tebakjenaka[id][3])
-            delete this.tebakjenaka[id]
-            return conn.sendButton(m.chat, '*Yah Menyerah :( !*', author, null, buttontebakjenaka, m)
+            clearTimeout(this.tebakanime[id][3])
+            delete this.tebakanime[id]
+            return conn.sendButton(m.chat, '*Yah Menyerah :( !*', author, null, buttontebakanime, m)
         }
-        let json = JSON.parse(JSON.stringify(this.tebakjenaka[id][1]))
+        let json = JSON.parse(JSON.stringify(this.tebakanime[id][1]))
         // m.reply(JSON.stringify(json, null, '\t'))
         if (m.text.toLowerCase() == json.name.toLowerCase().trim()) {
-            global.db.data.users[m.sender].exp += this.tebakjenaka[id][2]
-            conn.sendButton(m.chat, `*Benar!*\n+${this.tebakjenaka[id][2]} XP`, author, null, buttontebakjenaka, m)
-            clearTimeout(this.tebakjenaka[id][3])
-            delete this.tebakjenaka[id]
+            global.db.data.users[m.sender].exp += this.tebakanime[id][2]
+            conn.sendButton(m.chat, `*Benar!*\n+${this.tebakanime[id][2]} XP`, author, null, buttontebakanime, m)
+            clearTimeout(this.tebakanime[id][3])
+            delete this.tebakanime[id]
         } else if (similarity(m.text.toLowerCase(), json.name.toLowerCase().trim()) >= threshold)
             m.reply(`*Dikit Lagi!*`)
         else
             conn.sendButton(m.chat, `*Salah!*`, author, null, [
-                ['hint', '/hint'],
-                ['nyerah', 'menyerah']
+                ['Hint', '/hani'],
+                ['Nyerah', 'menyerahani']
             ], m)
     }
     return !0
 }
 export const exp = 0
 
-const buttontebakjenaka = [
-    ['tebakjenaka', '/tebakjenaka']
+const buttontebakanime = [
+    ['tebakanime', '/tebakanime']
 ]

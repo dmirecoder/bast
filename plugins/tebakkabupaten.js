@@ -13,7 +13,7 @@ let handler = async (m, { conn, usedPrefix }) => {
   let caption = `
   Kabupaten apakah ini?
 Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}hint untuk bantuan
+Ketik ${usedPrefix}hkab untuk bantuan
 Bonus: ${poin} XP
     `.trim()
     conn.tebakkabupaten[id] = [
@@ -34,6 +34,6 @@ handler.command = /^tebakkabupaten/i
 export default handler
 
 const buttons = [
-    ['hint', '/hint'],
-    ['nyerah', 'menyerah']
+    ['Hint', '/hkab'],
+    ['Nyerah', 'menyerahkab']
 ]

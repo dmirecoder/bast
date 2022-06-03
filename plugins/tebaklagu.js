@@ -16,7 +16,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
     let caption = `
 TEBAK JUDUL LAGU
 Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik *${usedPrefix}hint* untuk bantuan
+Ketik *${usedPrefix}hlag* untuk bantuan
 Bonus: ${poin} XP
 *Balas pesan ini untuk menjawab!*`.trim()
     conn.tebaklagu[id] = [
@@ -38,6 +38,6 @@ handler.command = /^tebaklagu/i
 export default handler
 
 const buttons = [
-    ['hint', '/hint'],
-    ['nyerah', 'menyerah']
+    ['Hint', '/hlag'],
+    ['Nyerah', 'menyerahlag']
 ]

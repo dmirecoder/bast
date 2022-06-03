@@ -4,10 +4,10 @@ let handler = async (m, { conn }) => {
     if (!(id in conn.tebakkabupaten)) throw false
     let json = conn.tebakkabupaten[id][1]
     conn.sendButton(m.chat, '```' + json.title.replace(/[AIUEOaiueo]/ig, '_') + '```', author, null, [
-        ['nyerah', 'menyerah']
+        ['Nyerah', 'menyerahkab']
     ], m)
 }
-handler.command = /^hint$/i
+handler.command = /^hkab$/i
 
 handler.limit = true
 
