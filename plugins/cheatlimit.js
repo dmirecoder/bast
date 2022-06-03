@@ -1,10 +1,13 @@
-import fetch from 'node-fetch'
-let handler = async (m, { text }) => {
-m.reply('> global.db.data.users[m.sender].limit = 100000')
-
+let handler = async (m) => {
+    let who
+    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+    else who = m.sender
+    global.db.data.users[who].limit = 100000
+    conn.sendButton(m.chat, `*${global.db.data.users[who].limit}* Limit Tersisa`, author, null, [
+        ['Chit', '.cheatlimit']
+    ], m)
 }
-handler.help = ['cheatlimit']
-handler.tags = ['owner']
-handler.command = /^cheatlimit$/i
-
+handler.help = ['cheatlimit [@user]']
+handler.tags = ['xp']
+handler.command = /^(cheatlimit)$/i
 export default handler
