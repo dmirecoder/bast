@@ -5,17 +5,17 @@ import fs from 'fs'
 
 /**Owner number**/
 global.owner = [
-  ['6283190403329'],
-  ['6281313312123'],
-  ['62895605887712'],
-  ['6282328303332'],
-  ['62887435373103'],
-  ['6282195322106', '️Owner Hinata-Md', true]
+  ['6281268414805'],
+  ['62811666884'],
+  ['6285172206884'],
+  ['628117509600'],
+  ['628111'],
+  ['62811750880', '️Opux', true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
-global.prems = [] // Premium user has unlimited limit
-global.girlfren = [] // Your gf/pacar
+global.prems = [62811666884] // Premium user has unlimited limit
+global.girlfren = [628117509600] // Your gf/pacar
 
 //Api website
 global.APIs = { // API Prefix
@@ -28,6 +28,7 @@ global.APIs = { // API Prefix
  dzx : 'https://api.dhamzxploit.my.id',
  erdwepe : 'https://erdwpe-api.herokuapp.com',
  fdci : 'https://api.fdci.se',
+ fxc7 : 'https://api-xcoders.xyz/',
  hardianto : 'https://hardianto.xyz',
  jonaz : 'https://jonaz-api-v2.herokuapp.com',
  LeysCoder : 'https://leyscoders-api.herokuapp.com',
@@ -55,6 +56,7 @@ global.APIKeys = { // APIKey Here
  'https://pencarikode.xyz' : 'pais',
  'https://rest-beni.herokuapp.com' : 'benniismaelapikey',
  'https://violetics.pw' : 'beta',
+ 'https://api-xcoders.xyz/api' : 'hnslrl1882',
  'https://zahirr-web.herokuapp.com' : 'zahirgans',
  'https://zekais-api.herokuapp.com' : 'zekais',
  'https://zenzapis.xyz' : 'f9fccfcff1'
@@ -65,26 +67,26 @@ let keyalpha = api[Math.floor(Math.random() * api.length)]
 global.apikeys = keyalpha
 
 // Sticker WM
-global.packname = 'Created By'
-global.author = 'Hinata-Md'
-global.wm = "Hinata-Md X Wudysoft"
-global.multiplier = 69 // The higher, The harder levelup
+global.packname = 'My Sticker'
+global.author = 'Ayra'
+global.wm = "Ayra Comel"
+global.multiplier = 17 // The higher, The harder levelup
 
 //
-global.eror = '_Erorr banh_'
+global.eror = '_Erorr broo_'
 global.wait = '_Process..._'
 global.render = '_Wait render_'
-global.webs = 'https://s.id/Cerdasin62/'//Your Website
-global.logo = "https://i.pinimg.com/564x/1d/10/8e/1d108e56fb96be61d9b48f7e17dd95b7.jpg"//Your logo
+global.webs = 'https://instagram.com/tammyartha/'//Your Website
+global.logo = "https://telegra.ph/file/f09f40f4a37713f73de30.jpg"//Your logo
 global.gcwangsaf = "https://chat.whatsapp.com/KAFK2bUWcK9Htf10l8b8Ei"//Link Group whatsapp
 
 //Donasi
-global.saweria = "https://saweria.co/wudysoft"// website saweria.co
-global.dana = ["0887435373103"]
-global.pulsa = ["082195322106"]//pulsa here
-global.trakteer = "https://trakteer.id/wudysoft"//Link url https://
-global.paypal = "wudysoft@gmail.com"//paypal email
-global.gopay = "082195322106"//Numver for Payment digital Gopay Gojek
+global.saweria = "https://saweria.co/opuxtad"// website saweria.co
+global.dana = ["081268414805"]
+global.pulsa = ["081268414805"]//pulsa here
+global.trakteer = "https://trakteer.id/opuxtad"//Link url https://
+global.paypal = "ultesame@gmail.com"//paypal email
+global.gopay = "081268414805"//Numver for Payment digital Gopay Gojek
 
 
 //Rpg

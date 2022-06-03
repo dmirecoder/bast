@@ -1,7 +1,7 @@
 {
-    "name": "RkgkNetBot",
+    "name": "opuxBot",
     "version": "1.0.01",
-    "description": "©FearTeam-2022",
+    "description": "what?",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -26,7 +26,7 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/Rizxyu",
+    "homepage": "https://github.com/dmirecoder",
     "author": {
         "name": "Rizxyu"
     },
