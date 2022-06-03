@@ -4,7 +4,7 @@ let handler = async (m) => {
     else who = m.sender
     conn.sendButton(m.chat, `*${global.db.data.users[who].limit}* Limit Tersisa`, author, null, [
         ['BELI', '.buy'],
-        ['Chit', '.cheatlimit']
+        ['Chit', '.ngechit']
     ], m)
 }
 handler.help = ['limit [@user]']

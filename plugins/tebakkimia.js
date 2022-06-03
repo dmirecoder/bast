@@ -18,7 +18,7 @@ Ketik ${usedPrefix}hkim untuk bantuan
 Bonus: ${poin} XP
     `.trim()
     conn.tebakkimia[id] = [
-        await conn.sendButton(m.chat, caption, author, `https://api-xfar05.herokuapp.com/api/canvas/gura?teks=${command}`, buttons, m),
+        await conn.sendButton(m.chat, caption, author, `https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=inferno-logo&doScale=false&scaleWidth=400&scaleHeight=400&fontsize=50&fillTextType=0&backgroundColor=black&text=${command}`, buttons, m),
         json, poin,
         setTimeout(() => {
             if (conn.tebakkimia[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, author, null, [

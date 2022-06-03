@@ -3,11 +3,13 @@ let handler = async (m) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
     global.db.data.users[who].limit = 100000
+    global.db.data.users[who].money = 100000
+    global.db.data.users[who].xp = 100000
     conn.sendButton(m.chat, `*${global.db.data.users[who].limit}* Limit Tersisa`, author, null, [
-        ['Chit', '.cheatlimit']
+        ['Chit', '.ngechit']
     ], m)
 }
-handler.help = ['cheatlimit [@user]']
+handler.help = ['ngechit [@user]']
 handler.tags = ['xp']
-handler.command = /^(cheatlimit)$/i
+handler.command = /^(ngechit)$/i
 export default handler
