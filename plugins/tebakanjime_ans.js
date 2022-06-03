@@ -8,7 +8,7 @@ export async function before(m) {
     if (!(id in this.tebakanime))
         return conn.sendButton(m.chat, 'Soal itu telah berakhir', author, null, buttontebakanime, m)
     if (m.quoted.id == this.tebakanime[id][0].id) {
-        let isSurrender = /^(menyerahani)$/i.test(m.text)
+        let isSurrender = /^((me)?nyerah|Nyerah|surr?ender|menyerah?ani)$/i.test(m.text)
         if (isSurrender) {
             clearTimeout(this.tebakanime[id][3])
             delete this.tebakanime[id]
